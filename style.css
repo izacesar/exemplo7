@@ -6,14 +6,13 @@
 }
 
 body {
-  background: linear-gradient(135deg, #701f65, #7b076b);
+  background: linear-gradient(135deg, #700092, #180028);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-/* CARD */
 .card {
   background: white;
   padding: 25px;
@@ -22,7 +21,6 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* INPUTS */
 input {
   width: 100%;
   padding: 10px;
@@ -31,11 +29,10 @@ input {
   border: 1px solid #ccc;
 }
 
-/* BOTÕES */
 button {
   width: 100%;
   padding: 10px;
-  background: #701f64;
+  background: #b3007d; 
   color: white;
   border: none;
   border-radius: 6px;
@@ -44,17 +41,29 @@ button {
 }
 
 button:hover {
-  background: #7b0750;
+  background: #940071;
 }
 
-/* HEADER */
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column-reverse; 
+  align-items: flex-end; 
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-/* LISTA */
+#logoutBtn {
+  width: auto; 
+  margin-top: 0;
+  padding: 5px 10px;
+  background: #5d0269; 
+  font-size: 0.8rem;
+}
+
+#logoutBtn:hover {
+  background: #704571;
+}
+
 ul {
   margin-top: 15px;
   list-style: none;
@@ -63,13 +72,26 @@ ul {
 li {
   display: flex;
   justify-content: space-between;
-  background: #f1f1f1;
+  background: #eef2f7; 
   padding: 8px;
   border-radius: 6px;
   margin-bottom: 5px;
+  color: #333333;
 }
 
-/* ESCONDER */
+li button {
+  width: auto;
+  margin: 0;
+  padding: 0 5px;
+  background: transparent;
+  color: #999;
+}
+
+li button:hover {
+  background: transparent;
+  color: #d94fb9;
+}
+
 .hidden {
   display: none;
 }

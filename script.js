@@ -1,13 +1,18 @@
 const loginSection = document.getElementById("loginSection");
 const appSection = document.getElementById("appSection");
+
 const loginBtn = document.getElementById("loginBtn");
 const logoutBtn = document.getElementById("logoutBtn");
+
 const usernameInput = document.getElementById("username");
 const passwordInput = document.getElementById("password");
+
 const userNameDisplay = document.getElementById("userNameDisplay");
 const productName = document.getElementById("productName");
+
 const productPrice = document.getElementById("productPrice");
 const addBtn = document.getElementById("addBtn");
+
 const cartList = document.getElementById("cartList");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -56,7 +61,6 @@ window.onload = () => {
    carrinho();
 };
 
-// LOGIN
 loginBtn.onclick = () => {
   const username = usernameInput.value;
   const password = passwordInput.value;
@@ -70,15 +74,14 @@ loginBtn.onclick = () => {
   app(username);
 };
 
-// LOGOUT
 logoutBtn.onclick = () => {
   localStorage.removeItem("user");
   login();
 };
 
 addBtn.onclick = () => {
-  const nome = productName.value;
-  const preco = productPrice.value;
+  const nome = nomeProduto.value;
+  const preco = precoProduto.value;
 
   if (!nome || !preco) {
     alert("Preencha os campos!");
@@ -88,14 +91,14 @@ addBtn.onclick = () => {
   cart.push({ nome, preco });
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  productName.value = "";
-  productPrice.value = "";
+  nomeProduto.value = "";
+  precoProduto.value = "";
 
    carrinho();
 };
 
 window.addEventListener("storage", (event) => {
-  // LOGIN / LOGOUT
+
   if (event.key === "user") {
     const user = localStorage.getItem("user");
 
@@ -106,7 +109,6 @@ window.addEventListener("storage", (event) => {
     }
   }
 
-  // CARRINHO
   if (event.key === "cart") {
     cart = JSON.parse(localStorage.getItem("cart")) || [];
      carrinho();
