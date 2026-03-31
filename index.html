@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>App Carrinho</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section id="loginSection">
+    <div class="card">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Usuário">
+      <input type="password" id="password" placeholder="Senha">
+      <button id="loginBtn">Acessar</button>
+    </div>
+  </section>
+
+  <section id="appSection" class="hidden">
+    <div class="card">
+
+      <header>
+        <h3>Bem-vindo, <span id="userNameDisplay"></span></h3>
+        <button id="logoutBtn">Logout</button>
+      </header>
+
+      <div class="inputs">
+        <input type="text" id="productName" placeholder="Produto">
+        <input type="number" id="productPrice" placeholder="Preço">
+        <button id="addBtn">Adicionar</button>
+      </div>
+
+      <ul id="cartList"></ul>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
